@@ -48,6 +48,25 @@
         filter: blur(70px);
         opacity: 0.3;
       }
+      /* Custom Colors */
+      .bg-orange {
+        background-color: #df7f26;
+      }
+      .bg-blue {
+        background-color: #2b455e;
+      }
+      .text-orange {
+        color: #df7f26;
+      }
+      .text-blue {
+        color: #2b455e;
+      }
+      .hover\:bg-orange:hover {
+        background-color: #df7f26;
+      }
+      .hover\:bg-blue:hover {
+        background-color: #2b455e;
+      }
     </style>
   </head>
   <body class="bg-slate-50">
@@ -56,23 +75,20 @@
       class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-4xl"
     >
       <div
-        class="glass-effect rounded-2xl shadow-lg px-6 py-4 flex justify-between items-center"
+        class="glass-effect rounded-2xl shadow-lg px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center"
       >
         <div class="flex items-center space-x-4">
-          <!-- Replace with your logo -->
           <div
-            class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold"
+            class="w-8 h-8 sm:w-10 sm:h-10 bg-blue rounded-xl flex items-center justify-center text-white font-bold"
           >
-            LL
+            <img src="/assets/logo.png" alt="Legal Launch Image" />
           </div>
-          <span
-            class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text"
-          >
+          <span class="text-lg sm:text-xl font-bold text-blue">
             Legal Launch
           </span>
         </div>
         <button
-          class="bg-black text-white px-6 py-2 rounded-xl hover:bg-gray-800 transition-colors"
+          class="bg-orange text-white px-4 py-2 sm:px-6 sm:py-2 rounded-xl hover:bg-orange/90 transition-colors text-sm sm:text-base"
         >
           Get Started
         </button>
@@ -80,7 +96,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen relative overflow-hidden pt-24">
+    <section class="min-h-screen flex items-center relative overflow-hidden pt-24 sm:pt-0">
       <!-- Animated background blobs -->
       <div class="absolute inset-0 overflow-hidden">
         <div
@@ -92,37 +108,34 @@
       </div>
 
       <!-- Content -->
-      <div class="relative max-w-7xl mx-auto px-4 py-20">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <!-- Left side -->
-          <div class="space-y-8">
+          <div class="space-y-6 sm:space-y-8 text-center lg:text-left">
             <div class="inline-block">
               <span
-                class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-1 rounded-full"
+                class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full"
               >
-                #1 Teen Legal Protection
+                #1 Legal Protection for Teens
               </span>
             </div>
-            <h1 class="text-5xl font-bold leading-tight">
+            <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
               Your Personal
-              <span
-                class="bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text"
-              >
-                Legal Guardian
-              </span>
+              <span class="text-blue"> Legal Guardian </span>
             </h1>
-            <p class="text-xl text-gray-600">
-              We make legal protection simple, affordable, and actually make
-              sense. No complicated stuff, just pure protection! 🛡️
+            <p class="text-lg sm:text-xl text-gray-600">
+              Designed specifically for teens, we make legal protection simple,
+              affordable, and easy to understand. No complicated jargon, just
+              pure peace of mind! 🛡️
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
-                class="bg-black text-white px-8 py-4 rounded-2xl hover:bg-gray-800 transition-colors"
+                class="bg-orange text-white px-6 py-3 sm:px-8 sm:py-4 rounded-2xl hover:bg-orange/90 transition-colors text-sm sm:text-base"
               >
                 Get Protected - $299
               </button>
               <button
-                class="border-2 border-black px-8 py-4 rounded-2xl hover:bg-black hover:text-white transition-colors"
+                class="border-2 border-blue text-blue px-6 py-3 sm:px-8 sm:py-4 rounded-2xl hover:bg-blue hover:text-white transition-colors text-sm sm:text-base"
               >
                 Learn More
               </button>
@@ -130,102 +143,81 @@
           </div>
 
           <!-- Right side - Interactive Cards -->
-          <div class="grid grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 sm:mt-0">
             <div class="card-hover bg-white p-6 rounded-2xl shadow-lg">
               <div
-                class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4"
+                class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4"
               >
-                <i class="fas fa-shield-alt text-indigo-600"></i>
+                <i class="fas fa-shield-alt text-blue"></i>
               </div>
               <h3 class="font-bold mb-2">24/7 Protection</h3>
-              <p class="text-gray-600 text-sm">Always here when you need us</p>
-            </div>
-            <div class="card-hover bg-white p-6 rounded-2xl shadow-lg mt-12">
-              <div
-                class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4"
-              >
-                <i class="fas fa-comments text-purple-600"></i>
-              </div>
-              <h3 class="font-bold mb-2">Easy Chat</h3>
               <p class="text-gray-600 text-sm">
-                Simple conversations with experts
+                Always here when you need us, day or night.
               </p>
             </div>
             <div class="card-hover bg-white p-6 rounded-2xl shadow-lg">
               <div
                 class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4"
               >
-                <i class="fas fa-file-contract text-blue-600"></i>
+                <i class="fas fa-comments text-blue"></i>
+              </div>
+              <h3 class="font-bold mb-2">Easy Chat</h3>
+              <p class="text-gray-600 text-sm">
+                Talk to legal experts in simple, teen-friendly language.
+              </p>
+            </div>
+            <div class="card-hover bg-white p-6 rounded-2xl shadow-lg">
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-file-contract text-blue"></i>
               </div>
               <h3 class="font-bold mb-2">Doc Help</h3>
-              <p class="text-gray-600 text-sm">We handle the paperwork</p>
+              <p class="text-gray-600 text-sm">
+                We help you understand and handle legal documents.
+              </p>
             </div>
-            <div class="card-hover bg-white p-6 rounded-2xl shadow-lg mt-12">
+            <div class="card-hover bg-white p-6 rounded-2xl shadow-lg">
               <div
-                class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center mb-4"
+                class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4"
               >
-                <i class="fas fa-heart text-pink-600"></i>
+                <i class="fas fa-heart text-blue"></i>
               </div>
-              <h3 class="font-bold mb-2">Teen Friendly</h3>
-              <p class="text-gray-600 text-sm">Made for your generation</p>
+              <h3 class="font-bold mb-2">Made for Teens</h3>
+              <p class="text-gray-600 text-sm">
+                Legal protection designed just for you.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold">Trusted by Teens Everywhere</h2>
-          <p class="text-gray-600 mt-4">
-            Join thousands of protected teens across the country
-          </p>
-        </div>
-
-        <!-- Trust Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-gray-50 p-8 rounded-2xl">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 bg-blue-100 rounded-full"></div>
-              <div class="ml-4">
-                <h3 class="font-bold">Sarah K.</h3>
-                <p class="text-sm text-gray-600">Student</p>
-              </div>
-            </div>
-            <p class="text-gray-600">
-              "Finally, legal stuff that doesn't make my head spin! 🙌"
-            </p>
-          </div>
-          <!-- Add more testimonials as needed -->
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-black text-white">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-8">Ready to Get Protected?</h2>
+    <section class="py-16 sm:py-20 bg-blue text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8">
+          Ready to Get Protected?
+        </h2>
         <button
-          class="bg-white text-black px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors"
+          class="bg-orange text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl hover:bg-orange/90 transition-colors text-sm sm:text-base"
         >
           Start Your Protection Plan
         </button>
-        <p class="mt-4 text-gray-400">
+        <p class="mt-4 text-gray-200 text-sm sm:text-base">
           No commitment • Cancel anytime • 24/7 support
         </p>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <footer class="bg-blue text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <!-- Footer content similar to previous design -->
         </div>
         <div
-          class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400"
+          class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300 text-sm sm:text-base"
         >
           <p>&copy; 2024 Legal Launch. All rights reserved.</p>
         </div>
