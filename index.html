@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>Legal Launch | Modern Protection</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
@@ -13,36 +16,104 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <style>
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
       /* Custom Colors */
-      .bg-orange { background-color: #df7f26; }
-      .bg-blue { background-color: #2b455e; }
-      .text-orange { color: #df7f26; }
-      .text-blue { color: #2b455e; }
+      .bg-orange {
+        background-color: #df7f26;
+      }
+      .bg-blue {
+        background-color: #2b455e;
+      }
+      .text-orange {
+        color: #df7f26;
+      }
+      .text-blue {
+        color: #2b455e;
+      }
 
       /* Core Animations */
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       @keyframes floatOne {
-        0%, 100% { transform: translate(0, 0); }
-        50% { transform: translate(5px, -6px); }
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(5px, -6px);
+        }
       }
 
       @keyframes floatTwo {
-        0%, 100% { transform: translate(0, 0); }
-        50% { transform: translate(-6px, -4px); }
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-6px, -4px);
+        }
       }
 
       @keyframes floatThree {
-        0%, 100% { transform: translate(0, 0); }
-        50% { transform: translate(4px, -7px); }
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(4px, -7px);
+        }
       }
 
       @keyframes floatFour {
-        0%, 100% { transform: translate(0, 0); }
-        50% { transform: translate(-5px, -5px); }
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-5px, -5px);
+        }
+      }
+
+      /* Scroll Down Animation */
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .scroll-arrow {
+        animation: bounce 2s infinite;
+        cursor: pointer;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        z-index: 20;
+        font-size: 24px;
+        color: #2b455e;
       }
 
       /* Layout */
@@ -71,8 +142,7 @@
         -webkit-backdrop-filter: blur(8px);
         border-radius: 25px;
         border: 1px solid rgba(255, 255, 255, 0.18);
-        box-shadow: 
-          0 4px 12px rgba(31, 38, 135, 0.05),
+        box-shadow: 0 4px 12px rgba(31, 38, 135, 0.05),
           0 1px 4px rgba(0, 0, 0, 0.03);
         padding: 20px;
         min-height: 90px;
@@ -82,26 +152,24 @@
 
       /* Card Animations */
       .floating-card:nth-child(1) {
-        animation: fadeIn 1s ease-out forwards,
-                 floatOne 6s ease-in-out infinite;
+        animation: fadeIn 1s ease-out forwards, floatOne 6s ease-in-out infinite;
         animation-delay: 0s, 1s;
       }
 
       .floating-card:nth-child(2) {
-        animation: fadeIn 1s ease-out forwards,
-                 floatTwo 7s ease-in-out infinite;
+        animation: fadeIn 1s ease-out forwards, floatTwo 7s ease-in-out infinite;
         animation-delay: 0.4s, 1.4s;
       }
 
       .floating-card:nth-child(3) {
         animation: fadeIn 1s ease-out forwards,
-                 floatThree 5s ease-in-out infinite;
+          floatThree 5s ease-in-out infinite;
         animation-delay: 0.8s, 1.8s;
       }
 
       .floating-card:nth-child(4) {
         animation: fadeIn 1s ease-out forwards,
-                 floatFour 8s ease-in-out infinite;
+          floatFour 8s ease-in-out infinite;
         animation-delay: 1.2s, 2.2s;
       }
 
@@ -157,7 +225,7 @@
           padding: 20px;
           max-width: 400px;
         }
-        
+
         .cards-wrapper {
           display: flex;
           flex-direction: column;
@@ -165,7 +233,7 @@
           margin-top: 30px;
           padding-bottom: 40px;
         }
-        
+
         .floating-card {
           position: relative;
           width: 100%;
@@ -175,13 +243,6 @@
           bottom: auto;
           animation: none;
           opacity: 1;
-        }
-
-        .floating-card:nth-child(1),
-        .floating-card:nth-child(2),
-        .floating-card:nth-child(3),
-        .floating-card:nth-child(4) {
-          animation: none;
         }
       }
 
@@ -191,7 +252,7 @@
           padding: 10px;
           max-width: 300px;
         }
-        
+
         .cards-wrapper {
           display: flex;
           flex-direction: column;
@@ -199,7 +260,7 @@
           margin-top: 20px;
           padding-bottom: 30px;
         }
-        
+
         .floating-card {
           position: relative;
           width: 100%;
@@ -210,29 +271,20 @@
           animation: none;
           opacity: 1;
         }
-
-        .floating-card:nth-child(1),
-        .floating-card:nth-child(2),
-        .floating-card:nth-child(3),
-        .floating-card:nth-child(4) {
-          animation: none;
-        }
       }
 
       /* Background */
       body {
         background-color: #ffffff;
-        background-image: 
-          radial-gradient(#444cf7 0.7px, transparent 0.7px),
+        background-image: radial-gradient(#444cf7 0.7px, transparent 0.7px),
           radial-gradient(#444cf7 0.7px, #ffffff 0.7px);
         background-size: 28px 28px;
         background-position: 0 0, 14px 14px;
-        position: relative;
       }
 
       body::before {
-        content: '';
-        position: fixed;    
+        content: "";
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -252,9 +304,8 @@
         border: 1px solid rgba(255, 255, 255, 0.5);
       }
 
-      /* Enhanced icon styles */
       .floating-card i {
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-right: 12px;
         color: #2b455e;
         transition: transform 0.3s ease;
@@ -264,20 +315,19 @@
         transform: scale(1.1);
       }
 
-      /* Card content styling */
       .floating-card h3 {
         display: flex;
         align-items: center;
-        font-weight: 400;
+        font-weight: 600;
         color: #2b455e;
         margin-bottom: 8px;
-        font-size: 0.775rem;
+        font-size: 0.9rem;
       }
 
       .floating-card p {
         margin-left: 30px;
         line-height: 1.4;
-        font-size: 0.60rem;
+        font-size: 0.75rem;
       }
 
       /* Enhanced button styles */
@@ -291,13 +341,73 @@
         box-shadow: 0 6px 20px rgba(223, 127, 38, 0.3);
       }
 
-      /* Image enhancement */
       .main-image {
         transition: transform 0.5s ease;
       }
 
       .main-image:hover {
         transform: scale(1.02);
+      }
+
+      /* Enhanced detailed section - full width */
+      .detailed-section {
+        position: relative;
+        overflow: hidden;
+        padding: 4rem 0;
+      }
+
+      .detailed-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(
+          135deg,
+          #df7f26 0%,
+          rgba(223, 127, 38, 0.3) 100%
+        );
+        border-radius: 0 0 0 100%;
+        opacity: 0.1;
+      }
+
+      .feature-card {
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        border-left: 4px solid #2b455e;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(43, 69, 94, 0.1);
+      }
+
+      .cta-button {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .cta-button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transition: all 0.6s;
+        z-index: -1;
+      }
+
+      .cta-button:hover::after {
+        left: 100%;
       }
     </style>
   </head>
@@ -310,7 +420,9 @@
             <span class="ml-2 text-xl font-bold text-blue">Legal Launch</span>
           </div>
           <div class="flex items-center space-x-4">
-            <button class="bg-blue text-white px-6 py-2 rounded-full hover:bg-blue/90 transition-colors">
+            <button
+              class="bg-blue text-white px-6 py-2 rounded-full hover:bg-blue/90 transition-colors"
+            >
               Get Protected
             </button>
           </div>
@@ -318,8 +430,9 @@
       </div>
     </nav>
 
-
-    <section class="min-h-screen flex items-center hero-section pt-24 md:pt-28">
+    <section
+      class="min-h-screen flex items-center hero-section pt-24 md:pt-28 relative"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Left side content -->
@@ -329,53 +442,213 @@
               <span class="text-orange block mt-2">For Modern Teens</span>
             </h1>
             <p class="text-xl text-gray-600">
-              Cutting-edge legal solutions designed specifically for the needs of today's youth. Simple, affordable, and totally got your back!
+              Cutting-edge legal solutions designed specifically for the needs
+              of today's youth. Simple, affordable, and totally got your back!
             </p>
-            <div class="space-y-4">
-              <button class="bg-orange text-white px-8 py-4 rounded-lg hover:bg-orange/90 transition-colors">
-                Get Started - $299
-              </button>
-              <p class="text-sm text-gray-500">
-                ✨ No hidden fees • Cancel anytime • 24/7 support
-              </p>
+            <div>
+              <a
+                href="#detailed"
+                class="bg-orange text-white px-8 py-4 rounded-lg hover:bg-orange/90 transition-colors custom-button inline-block"
+              >
+                Learn More
+              </a>
             </div>
           </div>
 
           <!-- Right side with image and cards -->
           <div class="relative">
             <div class="image-container">
-              <img 
-                src="image.png" 
-                alt="Legal Protection" 
+              <img
+                src="image.png"
+                alt="Legal Protection"
                 class="w-full h-full object-contain rounded-2xl z-10 relative main-image"
-              >
-              
+              />
+
               <!-- Cards container -->
               <div class="cards-wrapper">
                 <div class="floating-card top-left">
-                    <h3><i class="fas fa-folder-open"></i> Why You Need These Documents</h3>
-                    <p class="text-gray-600 text-xs">Ensure your voice is heard and your interests are protected.</p>
+                  <h3>
+                    <i class="fas fa-folder-open"></i> Why You Need These
+                    Documents
+                  </h3>
+                  <p class="text-gray-600 text-xs">
+                    Ensure your voice is heard and your interests are protected.
+                  </p>
                 </div>
 
                 <div class="floating-card top-right">
-                    <h3><i class="fas fa-rocket"></i> What You Get with Legal Launch</h3>
-                    <p class="text-gray-600 text-xs">Financial & Medical POA, HIPAA & FERPA releases - all in one.</p>
+                  <h3>
+                    <i class="fas fa-rocket"></i> What You Get with Legal Launch
+                  </h3>
+                  <p class="text-gray-600 text-xs">
+                    Financial & Medical POA, HIPAA & FERPA releases - all in
+                    one.
+                  </p>
                 </div>
 
                 <div class="floating-card bottom-left">
-                    <h3><i class="fas fa-user-check"></i> Take Control of Your Future</h3>
-                    <p class="text-gray-600 text-xs">Be prepared and protected as you enter adulthood.</p>
+                  <h3>
+                    <i class="fas fa-user-check"></i> Take Control of Your
+                    Future
+                  </h3>
+                  <p class="text-gray-600 text-xs">
+                    Be prepared and protected as you enter adulthood.
+                  </p>
                 </div>
 
                 <div class="floating-card bottom-right">
-                    <h3><i class="fas fa-thumbs-up"></i> Easy and Convenient</h3>
-                    <p class="text-gray-600 text-xs">Quick online process with instant document delivery.</p>
+                  <h3><i class="fas fa-thumbs-up"></i> Easy and Convenient</h3>
+                  <p class="text-gray-600 text-xs">
+                    Quick online process with instant document delivery.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Simplified scroll arrow -->
+      <a href="#detailed" class="scroll-arrow"> ﹀ </a>
     </section>
+
+    <!-- Full-width Detailed Content Section -->
+    <section id="detailed" class="py-16 bg-gray-50 detailed-section">
+      <div class="px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-blue mb-4">
+            Take Control of Your Future
+          </h2>
+          <div class="w-20 h-1 bg-orange mx-auto mb-6 rounded-full"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Get the legal protection you need as you navigate the exciting
+            journey into adulthood.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white p-6 rounded-xl shadow-md feature-card">
+            <div class="flex items-start mb-4">
+              <div class="bg-blue/10 p-3 rounded-full mr-4">
+                <i class="fas fa-shield-alt text-blue text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-blue mb-2">
+                  Why You Need These Documents
+                </h3>
+                <p class="text-gray-600">
+                  You're about to enter adulthood, and with it comes a lot of
+                  new responsibilities. As exciting as it is to have more
+                  freedom, it can also be scary. What if something unexpected
+                  happens?
+                </p>
+              </div>
+            </div>
+            <ul class="space-y-2 ml-12">
+              <li class="flex items-start">
+                <i class="fas fa-check text-orange mr-2 mt-1"></i>
+                <span
+                  ><strong>Stay in Control:</strong> Make sure that if something
+                  happens, you're in charge of who makes decisions for
+                  you.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-orange mr-2 mt-1"></i>
+                <span
+                  ><strong>Get Help When You Need It:</strong> If you can't make
+                  a decision for yourself, the right person can step in to
+                  help.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-orange mr-2 mt-1"></i>
+                <span
+                  ><strong>Easy and Convenient:</strong> Completing the process
+                  is quick, simple, and done completely online – no
+                  hassle.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md feature-card">
+            <div class="flex items-start mb-4">
+              <div class="bg-orange/10 p-3 rounded-full mr-4">
+                <i class="fas fa-file-contract text-orange text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-blue mb-2">
+                  What You Get with Legal Launch
+                </h3>
+                <p class="text-gray-600">
+                  The Legal Launch program is here to help you be prepared for
+                  whatever life throws your way. By getting essential legal
+                  documents now, you can ensure that you're ready.
+                </p>
+              </div>
+            </div>
+            <ul class="space-y-2 ml-12">
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue mr-2 mt-1"></i>
+                <span
+                  ><strong>Financial Power of Attorney:</strong> Ensure someone
+                  can manage your financial matters if you're unable to do
+                  so.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue mr-2 mt-1"></i>
+                <span
+                  ><strong>Medical Power of Attorney:</strong> Have someone you
+                  trust step in to make healthcare decisions on your behalf if
+                  needed.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-blue mr-2 mt-1"></i>
+                <span
+                  ><strong>HIPAA and FERPA Releases:</strong> Grant access to
+                  your medical and school records in an emergency.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-blue/5 p-8 rounded-xl relative overflow-hidden">
+          <div
+            class="absolute top-0 right-0 w-40 h-40 bg-blue opacity-5 rounded-bl-full"
+          ></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-semibold text-blue mb-4">
+              Take Control of Your Future:
+            </h3>
+            <p class="text-gray-700 mb-6 text-lg">
+              Don't wait until it's too late. Protect yourself, and be ready for
+              whatever comes your way. Get started with Legal Launch today –
+              because you deserve peace of mind as you navigate adulthood.
+            </p>
+            <button
+              class="bg-orange text-white px-8 py-4 rounded-lg hover:bg-orange/90 transition-all cta-button"
+            >
+              Get Started - $299
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
