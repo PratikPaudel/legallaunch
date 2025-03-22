@@ -180,7 +180,7 @@
       .scroll-arrow {
         animation: bounce 2s infinite;
         cursor: pointer;
-        bottom: 30px;
+        bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
         position: absolute;
@@ -289,6 +289,12 @@
         .floating-card.bottom-right {
           bottom: 40px;
           right: -45px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .scroll-arrow {
+          bottom: -20px;
         }
       }
 
@@ -585,77 +591,172 @@
       <a href="#detailed" class="scroll-arrow"> ﹀ </a>
     </section>
 
-    <section id="detailed" class="py-16 bg-white">
+    <section id="detailed" class="py-12 md:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Block 1: Text Left, Image Right -->
-        <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
-          <!-- Text on Left -->
-          <div class="detailed-card">
-            <h2 class="text-2xl font-bold text-blue mb-6">
-              Why You Need These Documents
-            </h2>
-            <ul class="custom-bullet text-gray-700">
-              <li>
-                <strong>Stay in Control:</strong> Make sure that if something
-                happens, you're in charge of who makes decisions for you.
-              </li>
-              <li>
-                <strong>Get Help When You Need It:</strong> If you can't make a
-                decision for yourself, the right person can step in to help.
-              </li>
-              <li>
-                <strong>Easy and Convenient:</strong> Completing the process is
-                quick, simple, and done completely online – no hassle. You'll
-                get your documents either by email or can pick them up in
-                person.
-              </li>
-            </ul>
-          </div>
-          <!-- Image on Right -->
-          <div class="detailed-image">
+        <!-- Block 1: Image Left, Text Right -->
+        <div
+          class="flex flex-col md:flex-row items-center md:space-x-12 mb-12 md:mb-24"
+        >
+          <!-- Image -->
+          <div class="md:w-1/2 relative mb-8 md:mb-0">
             <img
               src="docs.jpg"
               alt="Legal Protection"
-              class="w-full h-full object-contain rounded-2xl"
+              class="w-full h-auto object-contain rounded-lg shadow-md"
             />
           </div>
+          <!-- Text -->
+          <div class="md:w-1/2">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">
+              Why You Need These Documents
+            </h2>
+            <ul class="list-none pl-0 text-gray-700 space-y-6">
+              <li>
+                <strong class="text-gray-800">Stay in Control:</strong> Make
+                sure that if something happens, you're in charge of who makes
+                decisions for you.
+              </li>
+              <li>
+                <strong class="text-gray-800"
+                  >Get Help When You Need It:</strong
+                >
+                If you can't make a decision for yourself, the right person can
+                step in to help.
+              </li>
+              <li>
+                <strong class="text-gray-800">Easy and Convenient:</strong>
+                Completing the process is quick, simple, and done completely
+                online – no hassle. You'll get your documents either by email or
+                can pick them up in person.
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <!-- Block 2: Image Left, Text Right -->
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <!-- Image on Left -->
-          <div class="detailed-image">
+        <!-- Block 2: Text Left, Image Right -->
+        <div
+          class="flex flex-col md:flex-row items-center md:space-x-12 mb-8 md:mb-16"
+        >
+          <!-- Text -->
+          <div class="md:w-1/2 order-last md:order-first">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">
+              What You Get with Legal Launch
+            </h2>
+            <ul class="list-none pl-0 text-gray-700 space-y-6">
+              <li>
+                <strong class="text-gray-800"
+                  >Financial Power of Attorney:</strong
+                >
+                Ensure someone can manage your financial matters if you're
+                unable to do so.
+              </li>
+              <li>
+                <strong class="text-gray-800"
+                  >Medical Power of Attorney:</strong
+                >
+                Have someone you trust step in to make healthcare decisions on
+                your behalf if needed.
+              </li>
+              <li>
+                <strong class="text-gray-800">HIPAA and FERPA Releases:</strong>
+                Grant access to your medical and school records, so your parents
+                or trusted contacts can help in an emergency.
+              </li>
+            </ul>
+          </div>
+          <!-- Image -->
+          <div class="md:w-1/2 relative mb-8 md:mb-0 md:ml-8">
             <img
               src="legallunch.png"
               alt="Legal Protection"
-              class="w-full h-full object-contain rounded-2xl"
+              class="w-full h-auto object-contain rounded-lg shadow-md"
             />
-          </div>
-          <!-- Text on Right -->
-          <div class="detailed-card">
-            <h2 class="text-2xl font-bold text-blue mb-6">
-              What You Get with Legal Launch
-            </h2>
-            <ul class="custom-bullet text-gray-700">
-              <li>
-                <strong>Financial Power of Attorney:</strong> Ensure someone can
-                manage your financial matters if you're unable to do so.
-              </li>
-              <li>
-                <strong>Medical Power of Attorney:</strong> Have someone you
-                trust step in to make healthcare decisions on your behalf if
-                needed.
-              </li>
-              <li>
-                <strong>HIPAA and FERPA Releases:</strong> Grant access to your
-                medical and school records, so your parents or trusted contacts
-                can help in an emergency.
-              </li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 w-full py-10 text-center">
+      <div class="container mx-auto px-4">
+        <!-- Logo and Brand -->
+        <div class="mb-6">
+          <img
+            src="logo.png"
+            alt="Legal Launch Logo"
+            class="h-10 w-auto mx-auto mb-2"
+          />
+          <h2 class="text-2xl font-bold text-blue mb-3">Legal Launch</h2>
+        </div>
+
+        <!-- Subscribe Button -->
+        <div class="max-w-md mx-auto mb-8">
+          <p class="text-gray-600 mb-4">
+            Stay updated with our latest legal tips and resources.
+          </p>
+          <a
+            href="#subscribeForm"
+            class="px-6 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition duration-300 inline-block"
+          >
+            Subscribe to Updates
+          </a>
+        </div>
+
+        <!-- Contact -->
+        <div class="mb-8">
+          <h3 class="font-bold text-gray-800 mb-4">Contact Us</h3>
+          <p class="text-gray-600">Email: hello@legallaunch.com</p>
+          <p class="text-gray-600">Phone: (555) 123-4567</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="mb-8 flex justify-center space-x-4">
+          <a
+            href="https://www.facebook.com/The-Huizenga-Law-Firm-PC-160774847272715/"
+            target="_blank"
+          >
+            <i
+              class="fab fa-facebook text-2xl text-gray-700 hover:text-gray-900"
+            ></i>
+          </a>
+          <a href="https://www.instagram.com/huizengalaw/" target="_blank">
+            <i
+              class="fab fa-instagram text-2xl text-gray-700 hover:text-gray-900"
+            ></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/huizengalaw/about/"
+            target="_blank"
+          >
+            <i
+              class="fab fa-linkedin text-2xl text-gray-700 hover:text-gray-900"
+            ></i>
+          </a>
+          <a href="https://huizengalaw.com/blog/" target="_blank">
+            <i
+              class="fas fa-rss-square text-2xl text-gray-700 hover:text-gray-900"
+            ></i>
+          </a>
+          <a href="https://www.pinterest.com/huizengalaw/" target="_blank">
+            <i
+              class="fab fa-pinterest-square text-2xl text-gray-700 hover:text-gray-900"
+            ></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCy0xxgk-1uvzNp9lELa3dSw"
+            target="_blank"
+          >
+            <i
+              class="fab fa-youtube-square text-2xl text-gray-700 hover:text-gray-900"
+            ></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-sm text-gray-500">
+          <p>© 2025 Legal Launch. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <script>
       // Smooth scrolling for anchor links
